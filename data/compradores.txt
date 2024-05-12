@@ -1,0 +1,10 @@
+Sofía Martínez|1012345678|32|sofiamtz|contraseña123|5551234567|sofiamtz@example.com|2500000
+Juan Pérez|2023456789|45|juanperez|contraseña456|5559876543|juanperez@example.com|1805000
+Ana Gutiérrez|3034567890|28|anagtz|contraseña789|5558765432|anagtz@example.com|32075000
+Carlos Rodríguez|4045678901|50|carlosr|contraseñaabc|5557654321|carlosr@example.com|4200000
+María López|5056789012|35|marialopez|contraseñaxyz|5556543210|marialopez@example.com|1502500
+Javier García|6067890123|40|javierg|contraseña321|5555432109|javierg@example.com|28080000
+Laura Hernández|7078901234|29|laurah|contraseña678|5554321098|laurah@example.com|20000000
+Diego Martín|8089012345|38|diegom|contraseñadef|5553210987|diegom@example.com|3705000
+Patricia Pérez|9090123456|42|patriciap|contraseñaxyz|5552109876|patriciap@example.com|1907500
+Jorge Sánchez|1011234567|33|jorges|contraseña456|5551098765|jorges@example.com|3000000
