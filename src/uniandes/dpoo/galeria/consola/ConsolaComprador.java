@@ -76,7 +76,7 @@ public class ConsolaComprador{
         System.out.print("Por favor, ingresa tu nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Por favor, ingresa tu identificación: ");
-        int identificacion = scanner.nextInt();
+        long identificacion = scanner.nextLong();
         System.out.print("Por favor, ingresa tu edad: ");
         int edad = scanner.nextInt();
         scanner.nextLine();

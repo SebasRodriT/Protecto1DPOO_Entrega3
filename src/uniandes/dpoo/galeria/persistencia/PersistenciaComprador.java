@@ -53,7 +53,7 @@ public class PersistenciaComprador {
                 Scanner lineScanner = new Scanner(line);
                 lineScanner.useDelimiter("\\|");
                 String nombre = lineScanner.next();
-                int identificacion = lineScanner.nextInt();
+                long identificacion = lineScanner.nextLong();
                 int edad = lineScanner.nextInt();
                 String nombreUsuario = lineScanner.next();
                 String contraseña = lineScanner.next();

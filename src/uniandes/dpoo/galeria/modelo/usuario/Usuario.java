@@ -9,7 +9,7 @@ import uniandes.dpoo.galeria.modelo.plataforma.Plataforma;
 
 public class Usuario {
     protected String nombre;
-    protected int identificacion;
+    protected long identificacion;
     protected int edad;
     protected String nombreUsuario;
     protected String password;
@@ -17,7 +17,7 @@ public class Usuario {
    
 
 
-    public Usuario(String nombre, int identificacion, int edad, String nombreUsuario, String password, String road) {
+    public Usuario(String nombre, long identificacion, int edad, String nombreUsuario, String password, String road) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.edad = edad;
@@ -31,7 +31,7 @@ public class Usuario {
         return nombre;
     }
 
-    public int getIdentificacion() {
+    public long getIdentificacion() {
         return identificacion;
     }
 

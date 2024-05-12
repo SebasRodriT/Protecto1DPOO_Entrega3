@@ -25,7 +25,7 @@ public class Comprador extends Usuario {
     private OperadorGaleria operador;
     private Inventario inventarioGaleria;
     
-    public Comprador(String nombre, int identificacion, int edad, String nombreUsuario, String password,
+    public Comprador(String nombre, long identificacion, int edad, String nombreUsuario, String password,
                      String numeroTelefono, String correo, int saldo) {
         super(nombre, identificacion, edad, nombreUsuario, password, "Comprador");
         this.numeroTelefono = numeroTelefono;
