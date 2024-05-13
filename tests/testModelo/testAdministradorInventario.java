@@ -23,7 +23,7 @@ public class testAdministradorInventario {
 	public void testBuscarPiezaInventario() {
 		inv.agregarPiezainventario(pieza);
 		Pieza piezaEncontrada = adminInventario.buscarPiezaInventario(pieza);
-		assertNotNull(piezaEncontrada, "La pieza debería haber sido encontrada");
+		assertNotNull(piezaEncontrada, "La pieza debería haber sido encontrada ");
 		assertEquals(pieza.getTituloObra(), piezaEncontrada.getTituloObra(), "El título de la obra debe coincidir");
 	}
 	

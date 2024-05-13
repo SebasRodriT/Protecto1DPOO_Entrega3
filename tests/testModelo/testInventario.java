@@ -15,7 +15,7 @@ public class testInventario {
 	Pieza pieza = new Pieza(false, "La Mona Lisa", 1503, "Italia", artista,true, "Humanismo", 19890786);
 	AdministradorInventario adminInventario = new AdministradorInventario("Armando Reyes", 1054685947, 30);
 	Inventario inv = new Inventario();
-	
+	//test
 	@Test
 	public void testAgregarPiezainventario(){
 		inv.agregarPiezainventario(pieza);
