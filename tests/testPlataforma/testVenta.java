@@ -6,9 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import uniandes.dpoo.galeria.modelo.Artista;
 import uniandes.dpoo.galeria.modelo.Escultura;
+import uniandes.dpoo.galeria.modelo.Pieza;
 import uniandes.dpoo.galeria.modelo.empleado.AdministradorGaleria;
 import uniandes.dpoo.galeria.modelo.usuario.Comprador;
 
@@ -62,7 +64,20 @@ public class testVenta {
 	
 	
 	
-	
+		@Test
+		public void concultarhistoriaPieza() {
+			admin.registrarPiezaInventario(d);
+			assertEquals(d, admin.ConsultarPieza("David"));
+			
+		}
 
+		@Test
+		public void concultarhistoriaArtista() {
+			ArrayList<Pieza> prueba = new ArrayList<Pieza>();
+			prueba.add(d);
+			assertEquals(prueba, admin.consultarHistoriaArtista("Miguel Angel"));
+			
+			
+		}
 
 }
