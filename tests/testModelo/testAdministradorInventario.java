@@ -15,7 +15,7 @@ public class testAdministradorInventario {
 	Artista artista = new Artista("Leonardo Da Vinci", "Pintor");
 	Pieza pieza = new Pieza(false, "La Mona Lisa", 1503, "Italia", artista,true, "Humanismo", 19890786);
 	AdministradorInventario adminInventario = new AdministradorInventario("Armando Reyes", 1054685947, 30);
-	Inventario inv = new Inventario();
+	Inventario inv = Inventario.obtenerInstanciaInv();
 	
 	
 	@SuppressWarnings("static-access")
@@ -23,7 +23,6 @@ public class testAdministradorInventario {
 	public void testBuscarPiezaInventario() {
 		inv.agregarPiezainventario(pieza);
 		Pieza piezaEncontrada = adminInventario.buscarPiezaInventario(pieza);
-		assertNotNull(piezaEncontrada, "La pieza debería haber sido encontrada ");
 		assertEquals(pieza.getTituloObra(), piezaEncontrada.getTituloObra(), "El título de la obra debe coincidir");
 	}
 	

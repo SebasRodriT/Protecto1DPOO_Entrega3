@@ -73,7 +73,25 @@ public class testVenta {
 		public void concultarhistoriaArtista() {
 			ArrayList<Pieza> prueba = new ArrayList<Pieza>();
 			prueba.add(d);
+			admin.registrarPiezaInventario(d);
 			assertEquals(prueba.get(0).getTituloObra(), admin.consultarHistoriaArtista("Miguel Angel").get(0).getTituloObra());
+		}
+		
+		@Test
+		public void historiaArtista() throws Exception {
+			
+			admin.registrarPiezaInventario(d);
+			admin.verificarUsuario(comprador5);
+			comprador5.solicitarAumentoLimite();
+			comprador5.hacerOfertaVenta(d, "08/05/2024");
+			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+			PrintStream originalOut = System.out;
+			System.setOut(new PrintStream(outputStream));
+			
+			admin.historiaPiezasCompradas(comprador5.getNombre());
+			String[] outputs = outputStream.toString().split(System.lineSeparator());
+			assertEquals("Titulo Obra:"+d.getTituloObra(), outputs[2].trim());
+			
 		}
 
 }
