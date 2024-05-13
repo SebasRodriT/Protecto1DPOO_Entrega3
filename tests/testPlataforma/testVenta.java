@@ -1,14 +1,15 @@
 package testPlataforma;
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import uniandes.dpoo.galeria.modelo.Artista;
 import uniandes.dpoo.galeria.modelo.Escultura;
+import uniandes.dpoo.galeria.modelo.Pieza;
 import uniandes.dpoo.galeria.modelo.empleado.AdministradorGaleria;
 import uniandes.dpoo.galeria.modelo.usuario.Comprador;
 
@@ -62,7 +63,35 @@ public class testVenta {
 	
 	
 	
-	
+		@Test
+		public void concultarhistoriaPieza() {
+			admin.registrarPiezaInventario(d);
+			assertEquals(d.getTituloObra(), admin.ConsultarPieza("David").getTituloObra());
+		}
 
+		@Test
+		public void concultarhistoriaArtista() {
+			ArrayList<Pieza> prueba = new ArrayList<Pieza>();
+			prueba.add(d);
+			admin.registrarPiezaInventario(d);
+			assertEquals(prueba.get(0).getTituloObra(), admin.consultarHistoriaArtista("Miguel Angel").get(0).getTituloObra());
+		}
+		
+		@Test
+		public void historiaArtista() throws Exception {
+			
+			admin.registrarPiezaInventario(d);
+			admin.verificarUsuario(comprador5);
+			comprador5.solicitarAumentoLimite();
+			comprador5.hacerOfertaVenta(d, "08/05/2024");
+			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+			PrintStream originalOut = System.out;
+			System.setOut(new PrintStream(outputStream));
+			
+			admin.historiaPiezasCompradas(comprador5.getNombre());
+			String[] outputs = outputStream.toString().split(System.lineSeparator());
+			assertEquals("Titulo Obra:"+d.getTituloObra(), outputs[2].trim());
+			
+		}
 
 }

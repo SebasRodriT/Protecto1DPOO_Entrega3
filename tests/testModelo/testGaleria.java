@@ -27,7 +27,7 @@ public class testGaleria {
     Pieza piezaEnBodega = new Pieza(false, "El Hombre de Vitruvio", 1490, "Italia", artista,true, "Humanismo", 17890786);
     Pieza piezaEnHistorico = new Pieza(false,"La Última Cena", 1495, "Italia", artista, true, "Religión", 15789000);
     Galeria galeria = new Galeria("Italia", 130);
-    
+    //test
 	@Test
 	public void testVerificarCompradorExistente() {
 		

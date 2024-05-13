@@ -12,7 +12,7 @@ public class testArtista {
 	private Artista lDV = new Artista("Leonardo da Vinci", "Pintor");
 	private Dibujo eHV = new Dibujo("Papel", "Tinta y plumilla", "Humanismo", "34.4 cm x 24.5 cm ", false, "El hombre de Vitruvio", 1490, "Italia", lDV,  true, "Anatomia",158990890);
 	
-
+//prueba
 	@Test
 	public void testAgregarPieza() throws Exception {
 		assertTrue(lDV.getPiezas().isEmpty());

@@ -13,7 +13,7 @@ import uniandes.dpoo.galeria.modelo.Escultura;
 public class testEscultura {
 	private Artista mAG = new Artista("Miguel Ángel", "Escultor");
 	private Escultura dAV = new Escultura(5.17, 3.24, 5660, false, false, "David", 1501, "Italia", mAG, false, "personaje Bíblico", 20768900);
-	
+	//test
 	@Test
 	public void testmarcarVerdaderaElectricidad() throws Exception {
 		 dAV.marcarVerdaderaElectricidad();

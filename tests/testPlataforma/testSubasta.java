@@ -27,7 +27,7 @@ public class testSubasta {
 	private Comprador comprador4 = new Comprador("Lucía Hernández", 48576234, 29, "l.hernan", "LH29H", "3109876543", "lucia.hernan@gmail.com", 2000000000);
 	private Comprador comprador5 = new Comprador("Juan Pérez", 29713485, 38, "j.perez", "JP38P", "3123475689", "juan.perez@gmail.com", 2100000000);
 	
-	
+	//test
 	@Test 
 	public void testPiezaASubastar() throws Exception {
 		operador.iniciarSubasta(lNE);
