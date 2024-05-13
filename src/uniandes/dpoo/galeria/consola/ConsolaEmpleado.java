@@ -119,8 +119,10 @@ public class ConsolaEmpleado {
             		break;
             	case 3:
             		buscarPiezaHistorico(scanner, galeria);
+            		break;
             	case 4:
             		buscarPiezaExhibida(scanner, galeria);
+            		break;
             	case 0:
             		System.out.println("Saliendo del programa...");
             		scanner.close();
@@ -151,8 +153,10 @@ public class ConsolaEmpleado {
             		break;
             	case 2:
             		buscarPiezaHistorico(scanner, galeria);
+            		break;
             	case 3:
             		buscarPiezaExhibida(scanner, galeria);
+            		break;
             	case 0:
             		System.out.println("Saliendo del programa...");
             		scanner.close();
@@ -172,6 +176,9 @@ public class ConsolaEmpleado {
             System.out.println("1. Buscar pieza en bodega");
             System.out.println("2. Buscar pieza en histórico");
             System.out.println("3. Buscar pieza exhibida");
+            System.out.println("4. Agregar pieza bodega");
+            System.out.println("5. Agregar pieza histórico");
+            System.out.println("6. Agregar pieza exhibida");
             System.out.println("0. Salir del programa");
             System.out.print("Ingrese su opción: ");
             opcionAdmin = scanner.nextInt();
@@ -183,8 +190,19 @@ public class ConsolaEmpleado {
                     break;
                 case 2:
                 	buscarPiezaHistorico(scanner, galeria);
+                	break;
                 case 3:
                 	buscarPiezaExhibida(scanner, galeria);
+                	break;
+                case 4:
+                	agregarPiezaBodega(scanner, galeria);
+                	break;
+                case 5:
+                	agregarPiezaHistorico(scanner, galeria);
+                	break;
+                case 6:
+                	agregarPiezaExhibida(scanner, galeria);
+                	break;
                 case 0:
                     System.out.println("Saliendo del programa...");
                     scanner.close();
@@ -362,12 +380,10 @@ public class ConsolaEmpleado {
     }
 
     private static void obtenerRegistroPagos() {
-    	// Implementacion
+    	CajeroGaleria cajero = CajeroGaleria.obternerCajero();
+    	cajero.getRegistroPagos();
     }
-    private static void obtenerRegistroSubasta() {
-    	// Implementación
-    }
-    }
+}
 
 
         

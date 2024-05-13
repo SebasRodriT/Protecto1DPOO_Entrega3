@@ -49,5 +49,10 @@ public class CajeroGaleria extends Empleado {
     	return inventarioGaleria.historiaArtista(nombre);
     }
 
+	public HashMap<String, Pago> getRegistroPagos() {
+		return registroPagos;
+	}
+    
+
 }
 
