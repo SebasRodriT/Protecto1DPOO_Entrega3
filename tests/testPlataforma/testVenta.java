@@ -1,5 +1,4 @@
 package testPlataforma;
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -68,7 +67,6 @@ public class testVenta {
 		public void concultarhistoriaPieza() {
 			admin.registrarPiezaInventario(d);
 			assertEquals(d, admin.ConsultarPieza("David"));
-			
 		}
 
 		@Test
@@ -76,8 +74,6 @@ public class testVenta {
 			ArrayList<Pieza> prueba = new ArrayList<Pieza>();
 			prueba.add(d);
 			assertEquals(prueba, admin.consultarHistoriaArtista("Miguel Angel"));
-			
-			
 		}
 
 }
