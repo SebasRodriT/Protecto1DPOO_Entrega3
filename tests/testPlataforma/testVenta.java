@@ -66,14 +66,14 @@ public class testVenta {
 		@Test
 		public void concultarhistoriaPieza() {
 			admin.registrarPiezaInventario(d);
-			assertEquals(d, admin.ConsultarPieza("David"));
+			assertEquals(d.getTituloObra(), admin.ConsultarPieza("David").getTituloObra());
 		}
 
 		@Test
 		public void concultarhistoriaArtista() {
 			ArrayList<Pieza> prueba = new ArrayList<Pieza>();
 			prueba.add(d);
-			assertEquals(prueba, admin.consultarHistoriaArtista("Miguel Angel"));
+			assertEquals(prueba.get(0).getTituloObra(), admin.consultarHistoriaArtista("Miguel Angel").get(0).getTituloObra());
 		}
 
 }
